@@ -32,8 +32,9 @@ jobs:
   version-test:
     runs-on: ${{ matrix.os }}
     strategy:
-      matrix: [windows-latest,ubuntu-latest]
-      node_version: [14,15]
+     matrix: 
+       os: [windows-latest,ubuntu-latest]
+       node_version: [14,15]
     steps:
        - name: checkout the code
          uses: actions/checkout@v3
